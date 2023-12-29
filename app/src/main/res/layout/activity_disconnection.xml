@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".DisconnectionActivity">
+
+    <include
+        android:id="@+id/lay_dc"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_dc"
+        android:layout_above="@+id/download_con"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/edit_reading"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/text_category"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectengle_search"
+            android:hint="@string/enter_last_reading"
+            android:inputType="numberSigned"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:text="@string/read_status"/>
+        <RadioGroup
+            android:id="@+id/radio_gp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight=".33"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="OK"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight=".33"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="MD"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight=".33"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="LK"/>
+        </RadioGroup>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray">
+
+            <ImageView
+                android:id="@+id/img_pahchan"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_take_img_pahchan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/buttonshape2"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_action_camera" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="मीटर का फोटो ले"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/edit_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/text_category"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectengle_search"
+            android:hint="@string/enter_rem"
+            android:gravity="left"
+            android:lineHeight="10dp"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dis_connect"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/footer_dc"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/disconnect"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/footer_dc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/footer" />
+    </LinearLayout>
+</RelativeLayout>

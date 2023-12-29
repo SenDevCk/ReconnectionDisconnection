@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <domain-config cleartextTrafficPermitted="true">
+        <!--live-->
+        <domain includeSubdomains="true">164.100.37.5</domain>
+        <!--local-->
+        <domain includeSubdomains="true">192.168.1.67</domain>
+    </domain-config>
+</network-security-config>

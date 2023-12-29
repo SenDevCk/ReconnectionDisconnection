@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".BookListActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_head_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header_con_list"
+            layout="@layout/header" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/secrch_consumer"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_head_list"
+        android:layout_margin="5dp"
+
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/et_accountno"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ll_left"
+            android:background="@drawable/rectengle_search"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:gravity="center_vertical"
+            android:hint="Enter Consumer ID"
+            android:inputType="textCapCharacters"
+            android:padding="5dp"
+            android:textColor="@color/colorAccent"
+            android:textColorHighlight="@color/colorAccent"
+            android:textColorHint="@android:color/darker_gray">
+
+
+        </EditText>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/et_accountno"
+            android:background="@color/colorPrimaryDark" />
+
+        <RelativeLayout
+            android:id="@+id/ll_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="2dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/filter"
+                android:text="" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_consumer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_list_con"
+        android:layout_below="@+id/secrch_consumer"
+        android:divider="@color/green"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"></ListView>
+
+    <LinearLayout
+        android:id="@+id/footer_list_con"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer" />
+    </LinearLayout>
+</RelativeLayout>
